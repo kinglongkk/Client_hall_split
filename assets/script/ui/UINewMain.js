@@ -846,7 +846,7 @@ cc.Class({
             this.FormManager.CloseForm("UIStore");
             this.FormManager.CloseForm("UIBangDingTuiGuang");
 
-            this.FormManager.ShowForm("UIShiMing");
+            /*this.FormManager.ShowForm("UIShiMing");*/
         }else if('btn_wanfa' == btnName){
             this.FormManager.CloseForm("UIRecordAll");
             this.FormManager.CloseForm("UIStore");
@@ -884,7 +884,7 @@ cc.Class({
             this.FormManager.CloseForm("UIStore");
             this.FormManager.CloseForm("UIBangDingTuiGuang");
 
-            this.FormManager.ShowForm("UIShiMing");
+            /*this.FormManager.ShowForm("UIShiMing");*/
         }else if ('btn_LoginOut' == btnName) {
             this.Click_Btn_QieHuan();
         }else if ('btn_location' == btnName) {

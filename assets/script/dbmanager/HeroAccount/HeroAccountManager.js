@@ -424,6 +424,7 @@ var HeroAccountManager = app.BaseClass.extend({
                             console.error("AccountLogin(%s,%s) is doing login", charAccount, psw);
             return
         }
+		app.Client.ClearClientData();
         this.IsDoLogining(true);
 
         let sendPack = this.NetManager.GetHttpSendPack(0xFF03);
@@ -440,6 +441,7 @@ var HeroAccountManager = app.BaseClass.extend({
                             console.error("OneKeyRegAccount is doing login");
             return
         }
+		app.Client.ClearClientData();
         this.IsDoLogining(true);
 
         let sendPack = this.NetManager.GetHttpSendPack(0xFF00);

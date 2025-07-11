@@ -1,5 +1,5 @@
 /*
-    客户端公共require模块 28xin.com
+    客户端公共require模块 
 */
 
 require('JSBaseModule');

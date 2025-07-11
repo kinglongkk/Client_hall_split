@@ -288,7 +288,7 @@ var BaseForm = cc.Class({
             app["isShowShiMing"]=1;
             let appName=cc.sys.localStorage.getItem('appName');
             if (appName!="baodao") {
-                this.FormManager.ShowForm("UIShiMing");
+                /*this.FormManager.ShowForm("UIShiMing");*/
             }
         }else if(realNumber){
             let age=this.GetAge(realNumber);
@@ -305,7 +305,7 @@ var BaseForm = cc.Class({
                 app["isShowShiMing"]=1;
                 let appName=cc.sys.localStorage.getItem('appName');
                 if (appName!="baodao") {
-                    this.FormManager.ShowForm("UIShiMing");
+                    /*this.FormManager.ShowForm("UIShiMing");*/
                 }
             }
         }

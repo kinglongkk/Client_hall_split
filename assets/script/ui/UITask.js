@@ -200,7 +200,7 @@ cc.Class({
             //this.FormManager.ShowForm("ui/club/UIClub");
             //this.FormManager.ShowForm('UIClub');
         }else if(targetType==6){
-            this.FormManager.ShowForm('UIShiMing');
+            /*this.FormManager.ShowForm('UIShiMing');*/
         }else if(targetType==7){
             this.ShowSysMsg("去参与麻将牌局游戏吧");
         }else if(targetType==8){

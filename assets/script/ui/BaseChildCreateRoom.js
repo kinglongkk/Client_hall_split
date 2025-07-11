@@ -1,5 +1,5 @@
 /*
-创建房间子界面 28xin.com
+创建房间子界面 
  */
 var app = require("app");
 

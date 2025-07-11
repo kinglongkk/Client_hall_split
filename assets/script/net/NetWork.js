@@ -282,27 +282,21 @@ var NetWork = app.BaseClass.extend({
 		if (this.isTestWss) {
 			port = 9988;
 		}
-		let readyState = 0;
-		if (this.Connected() && this.socket) {
-			readyState = this.socket.readyState;
+
+		// 强制关闭现有连接
+		if (this.socket && (this.socket.readyState === WebSocket.OPEN || this.socket.readyState === WebSocket.CONNECTING)) {
+			this.SysLog("强制关闭现有WebSocket连接");
+			this.Disconnect(true); // 传入true表示是主动登出，不触发重连
 		}
 
-		//已经连接成功,直接回调握手函数
-		if (this.Connected() && this.socket && (readyState == 1) && this.host == host && this.port == port) {
-			this.Log("连接未断开");
-			this.handshakeCallback(false);
+		this.host = host;
+		this.port = port;
+		if (this.isTestWss) {
+			this.url = ['wss://', host, ':', port].join("");
+		} else {
+			this.url = ['ws://', host, ':', port].join("");
 		}
-		else {
-			this.host = host;
-			this.port = port;
-			if (this.isTestWss) {
-				this.url = ['wss://', host, ':', port].join("");
-			} else {
-				this.url = ['ws://', host, ':', port].join("");
-			}
-			// this.url = ['ws://', host, ':', port].join("");
-			this.Connect();
-		}
+		this.Connect();
 	},
 
 	// 连接Java服务器
